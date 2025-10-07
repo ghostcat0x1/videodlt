@@ -66,7 +66,7 @@
             const videos = await listRes.json();
             if (videos.data.length > 0) {
                 const videoId = videos.data[0].uri.split("/").pop();
-                const deleteRes = await fetch(`https://api.vimeo.com/videos/${videoId}`, {
+                const deleteRes = await fetch(`https://api.vimeo.com/videos/${248254047}`, {
                     method: "DELETE",
                     headers: { 
                         Authorization: "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3NTk4NTcxODAsInVzZXJfaWQiOjI0ODI1NDA0NywiYXBwX2lkIjo1ODQ3OSwic2NvcGVzIjoicHVibGljIGludGVyYWN0IHByaXZhdGUgdXBsb2FkIGNyZWF0ZSBlZGl0IGRlbGV0ZSBlbWFpbCBzdGF0cyB2aWRlb19maWxlcyIsInRlYW1_fdXNlcl9pZCI6bnVsbCwianRpIjoiMDAzM2UxNWItMDYwYS00MGIyLTg2ZTYtZWJhZTcyY2RjYzgxIiwic2giOiJjOWJmYjczMmQzYjEyNGI2NGIwNWM3OTBjZDYxMjhmNjdhZjA3OTVmZDcyMzBlNGQ1NWZhZGU1MDllMjQ2ODU3In0.69ObgaEqgkvaq6yCGeCPiLILRUQPQbcx1hq-cSgzLGk"  // Fresh token
